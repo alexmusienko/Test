@@ -1,0 +1,39 @@
+{
+    "name": "Zar Twitter",
+    "short_name": "ZarTwitter",
+    "description": "Тестовое PWA приложение для изучения материала",
+    "start_url": "/",
+    "display": "standalone",
+    "preferred_related_applications": false,
+    "orientation": "portrait-primary",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "icons": [
+        {
+            "src": "assets/favicon/safari-pinned-tab.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/assets/icons/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/icons/icon-256x256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "/assets/icons/icon-384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "/assets/icons/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

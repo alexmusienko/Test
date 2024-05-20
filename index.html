@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#2196f3">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="manifest" href="/manifest.json">
+  <title>Zar Twitter - Main</title>
+</head>
+<body>
+<header class="header">
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="/">
+        Zar<span>Twitter</span>
+      </a>
+      <span class="burger-menu">
+        <i class="material-symbols-outlined sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+    </div>
+  </nav>
+</header>
+
+<!-- side nav -->
+<ul class="sidenav side-menu" id="side-menu">
+  <li><a class="subheader">ZarTwitter</a></li>
+  <li><a class="waves-effect" href="/">Главная</a></li>
+  <li><a class="waves-effect" href="/about.html">Обо мне</a></li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li><a class="waves-effect" href="/contact.html">
+    <span class="material-symbols-outlined">contact_page</span>Связаться со мной</a>
+  </li>
+</ul>
+
+<!-- add recipe side nav -->
+<div class="sidenav side-form" id="side-form">
+  <div class="user-view">
+    <div class="background">
+      <img src="https://images.unsplash.com/photo-1594729095022-e2f6d2eece9c">
+    </div>
+    <a href="#user"><img class="circle" src="https://api.dicebear.com/7.x/thumbs/svg?seed=Loki"></a>
+    <a href="#name"><span class="white-text name">Zar Zakharov</span></a>
+    <a href="#email"><span class="white-text email">@severenit</span></a>
+  </div>
+  <form class="add-recipe container section">
+    <h6>Добавить пост</h6>
+    <div class="input-field">
+      <input class="validate" id="title" placeholder="Здесь заголовок..." type="text">
+      <label for="title">Заголовок</label>
+    </div>
+    <div class="input-field">
+      <input class="validate" id="ingredients" placeholder="Пиши сюда..." type="text">
+      <label for="ingredients">Описание</label>
+    </div>
+    <div class="input-field center">
+      <button class="btn-small">Чирикнуть</button>
+    </div>
+  </form>
+</div>
+
+<!-- CONTAINER -->
+<div class="container-wrap">
+  <div class="main">
+    <!-- HEAD SECTION -->
+    <div class="head-profile fullw">
+      <div class="head-img fullw"
+           style="background-image: url(https://images.unsplash.com/photo-1594729095022-e2f6d2eece9c)"></div>
+      <div
+              class="profile-img"
+              style="background-image: url(https://api.dicebear.com/7.x/thumbs/svg?seed=Loki);"
+      ></div>
+      <div class="head-info fullw">
+
+        <div class="head-btn-container fullw">
+          <button class="btn-floating btn-large add-btn sidenav-trigger" data-target="side-form">
+            <span class="material-symbols-outlined">add</span>
+          </button>
+        </div>
+        <h1>Zar Zakharov</h1>
+        <h2>@severenit</h2>
+        <p class="bio">Активный спикер, ментор, лектор и фронтенд разработчик в ВКонтакте</p>
+      </div>
+    </div>
+    <!-- END HEAD SECTION -->
+    <div id="posts" class="tweets fullw">
+      <!-- HERE SHOULD BE POSTS -->
+    </div>
+    <div id="loader">
+      <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+<script src="/js/materialize.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="module"></script>
+</body>
+</html>

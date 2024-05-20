@@ -1,0 +1,467 @@
+/* Color Variables */
+
+:root {
+  --primary: #FFE9D2;
+  --secondary: #FFE1C4;
+  --color: rgba(255, 255, 255, 0.87);
+  --link: #1565c0;
+  --link-hover: #0d47a1;
+  --background: #242424;
+  --white-glass: rgba(250, 250, 250, .6);
+  --grey-light: rgba(245, 248, 250, 1);
+  --grey: rgba(204, 214, 221, 1);
+  --grey-text: rgba(118, 118, 118, 1);
+  --grey-hover: rgba(101, 119, 134, .1);
+  --main: #2196f3;
+  --main-glass: rgba(29, 161, 242, .1);
+  --main-hover: #1e88e5;
+  --error: rgba(224, 36, 94, 1);
+}
+
+/* Font Variables */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset styles */
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  margin: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  touch-action: pan-x pan-y;
+  background-color: var(--grey-hover);
+}
+
+/* Heading styles */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Button styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 0;
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Link styles */
+a {
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Input styles */
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid var(--main);
+  -webkit-box-shadow: 0 1px 0 0 var(--main);
+  box-shadow: 0 1px 0 0 var(--main);
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: var(--main);
+}
+
+/* Button styles */
+.btn,
+.btn-large,
+.btn-small {
+  background-color: var(--main);
+}
+
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.btn-floating:hover {
+  background-color: var(--main-hover);
+}
+
+/* Button focus styles */
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus {
+  background-color: var(--main-hover);
+}
+
+/* Navigation styles */
+nav {
+  background: var(--main);
+  border-bottom: 10px solid var(--main-hover);
+}
+
+nav a {
+  text-transform: uppercase;
+  color: var(--grey-light);
+}
+
+nav a span {
+  font-weight: bold;
+}
+
+nav .sidenav-trigger {
+  margin: 0;
+}
+
+nav i {
+  color: var(--grey-light);
+}
+
+/* Sidenav styles */
+.sidenav {
+  background-color: var(--background);
+  color: var(--grey-light);
+}
+
+/* App styles */
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Add recipe heading styles */
+.add-recipe h6 {
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: var(--color);
+}
+
+/* Header navigation styles */
+.header .nav-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
+  padding: 0 12px;
+}
+
+/* Subheader styles */
+.sidenav .subheader {
+  background-color: var(--grey-hover);
+  font-weight: bold;
+}
+
+/* Link styles */
+.sidenav .subheader,
+.sidenav li>a {
+  color: var(--color);
+}
+
+/* Material symbol styles */
+.sidenav li>a>.material-symbols-outlined {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 4px;
+}
+
+/* Navigation trigger styles */
+.header nav .sidenav-trigger {
+  height: auto;
+}
+
+/* Container wrap styles */
+.container-wrap {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 50px;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* Main styles */
+.main {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+.main.page {
+  padding: 0 12px;
+}
+
+.main p {
+  margin-bottom: 6px;
+}
+
+/* Large button styles */
+.btn-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Head profile styles */
+.head-profile {
+  position: relative;
+  background-color: var(--background);
+}
+
+/* Head image styles */
+.head-img {
+  height: 150px;
+  background-color: var(--grey);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Profile image styles */
+.profile-img {
+  width: 135px;
+  height: 135px;
+  background-color: var(--grey);
+  background-image: url("https://pbs.twimg.com/profile_images/1123329102847578113/Y2glzgHT_400x400.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  cursor: pointer;
+}
+
+/* Profile image hover styles */
+.profile-img:hover {
+  filter: brightness(.8);
+}
+
+/* Head info styles */
+.head-info {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* Head button container styles */
+.head-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Head info h1 styles */
+.head-info h1 {
+  font-size: 19px;
+  font-weight: 800;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+/* Head info h2 styles */
+.head-info h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--grey-text);
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Bio styles */
+.bio {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color);
+  margin-bottom: 12px;
+}
+
+/* Tweet container styles */
+.tweet {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-gap: 10px;
+  padding: 15px;
+  border-bottom: 0.7px solid var(--grey);
+  transition: .2s;
+}
+
+/* Tweet hover effect */
+.tweet:hover {
+  background-color: var(--grey-hover);
+}
+
+/* Tweet header icon and text styles */
+.tweet-header-icon,
+.tweet-header-text {
+  color: var(--grey-text);
+  font-size: 13px;
+}
+
+.tweet-header-icon {
+  text-align: right;
+}
+
+/* Tweet author styles */
+.tweet-author {
+  width: 100%;
+  height: 100%;
+}
+
+/* Tweet author profile image styles */
+.tweet-aut-prof {
+  width: 50px;
+  height: 50px;
+  background-color: var(--grey);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+/* Tweet title styles */
+.tweet-title {
+  display: flex;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+/* Tweet account username styles */
+.tweet-acc {
+  font-weight: 700;
+  color: var(--color);
+  text-decoration: none;
+}
+
+/* Tweet username and date styles */
+.tweet-usr,
+.tweet-date {
+  font-weight: 400;
+  color: var(--grey-text);
+  margin-left: 5px;
+}
+
+/* Tweet content styles */
+.tweet-content .content {
+  font-size: 15px;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+/* Tweet image styles */
+.tweet-img {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Tweet actions container styles */
+.tweet-actions {
+  display: flex;
+  gap: 24px;
+}
+
+/* Tweet action styles */
+.action {
+  color: var(--grey-text);
+  cursor: pointer;
+  transition: .2s;
+}
+
+/* Tweet action hover effect */
+.action:hover {
+  color: var(--main);
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: #FFE9D2;
+    --secondary: #FFE1C4;
+    --color: #213547;
+    --link-hover: #747bff;
+    --background: #ffffff;
+    --white-glass: rgba(255, 255, 255, .6);
+    --grey-light: rgba(204, 214, 221, 1);
+    --grey: rgba(245, 248, 250, 1);
+    --grey-text: rgba(118, 118, 118, 1);
+    --grey-hover: rgba(101, 119, 134, .1);
+    --main: rgba(29, 161, 242, 1);
+    --main-glass: rgba(29, 161, 242, .1);
+    --main-hover: rgba(24, 138, 209, 1);
+    --error: rgba(224, 36, 94, 1);
+  }
+}
