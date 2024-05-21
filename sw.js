@@ -1,4 +1,4 @@
-const cachesStaticName = 'caches-static-v1';
+const cachesStaticName = 'caches-static-v3';
 const cachesDynamicName = 'caches-dynamic';
 
 const ASSETS = [
@@ -25,11 +25,23 @@ self.addEventListener('install', async (event) => {
 // Activate Service Worker
 self.addEventListener('activate', event => {
     console.log('Service Worker: Activated');
-})
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames
+                    .filter(cacheName => cacheName !== cachesStaticName && cacheName !== cachesDynamicName)
+                    .map(cacheName => caches.delete(cacheName)));
+        })
+    )
+});
 
 self.addEventListener('fetch', event => {
-    //console.log(event.request.url);
-    event.respondWith(StaticFirst(event.request));
+    const requestUrl = new URL(event.request.url);
+    if (requestUrl.origin === location.origin) {
+        event.respondWith(StaticFirst(event.request));
+    } else {
+        event.respondWith(NetworkFirst(event.request));
+    }
 })
 
 async function StaticFirst(request) {
